@@ -1,0 +1,11 @@
+<div class="container">
+<h1><%= @task.title  %></h1>
+<p><%= @task.details %></p>
+<% if @task.completed %>
+  <i class="fa-solid fa-square-check">The task is completed.</i>
+  <% else %>
+  <i class="fa-regular fa-square">The task is not completed yet.</i>
+  <% end %>
+  <%= link_to "Edit Task", edit_task_path(), class: 'btn btn-secondary'  %>
+  <%= link_to "Back to list", tasks_path(), class: 'btn btn-dark text-white'  %>
+</div>
